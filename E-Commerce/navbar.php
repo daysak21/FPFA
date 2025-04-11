@@ -1,5 +1,6 @@
-<div class="upper-nav primary-bg p-2 px-3 text-center text-break">
-        <span>Welcome to AFFAR.TN <a>Shop Now</a></span>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+      <span>Welcome to AFFAR.TN <a>Shop Now</a></span>
     </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -36,9 +37,10 @@
                         }
                     ?>
                 </ul>
+
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                    <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -93,6 +95,16 @@
                         </a>
                     </li>";
                     }
+                    echo"<li class='nav-item'>
+                        <a class='nav-link' href='./admin'>
+                        <i class='fa-solid fa-lock' aria-hidden='true'>
+                        </i>
+                        Admin
+                        </a>
+                    </li>"
+                    ;
+                        
+                
                     ?>
                 </ul>
             </div>
