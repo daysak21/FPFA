@@ -1,0 +1,180 @@
+/* Insert Product Page - Enhanced Green Theme */
+
+.insert-product {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.insert-product::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(39, 174, 96, 0.08) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+}
+
+.insert-product .container {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.insert-product h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.insert-product h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+    border-radius: 2px;
+}
+
+.insert-product form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.insert-product form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.insert-product .form-outline {
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.insert-product .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.insert-product .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: 0.3s ease;
+    width: 100%;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.insert-product .form-control:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+    background-color: #fff;
+    outline: none;
+}
+
+.insert-product input[type="file"].form-control {
+    padding: 12px;
+    border: 2px dashed #ced4da;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.insert-product input[type="file"].form-control:hover {
+    border-color: #27ae60;
+    background-color: rgba(39, 174, 96, 0.05);
+}
+
+.insert-product .btn-primary {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    border: none;
+    padding: 14px 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.insert-product .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+}
+
+.insert-product .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s ease;
+}
+
+.insert-product .btn-primary:hover::after {
+    left: 100%;
+}
+
+.insert-product .image-preview {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .insert-product {
+        padding: 40px 15px;
+    }
+
+    .insert-product form {
+        padding: 30px;
+        backdrop-filter: none;
+    }
+
+    .insert-product h2 {
+        font-size: 1.8rem;
+    }
+
+    .insert-product::before {
+        display: none;
+    }
+}

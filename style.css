@@ -1,0 +1,265 @@
+/* Enhanced Green Theme - For Both Register and Contact Pages */
+
+/* Common Styles */
+.register, .contact {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.register::before, .contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(46, 204, 113, 0.08) 0%, rgba(255,255,255,0) 70%);
+    z-index: 0;
+}
+
+.register .container, .contact .container {
+    max-width: 1000px;
+    position: relative;
+    z-index: 1;
+}
+
+.register h2, .contact h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
+
+.register h2::after, .contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #27ae60 0%, #2ecc71 100%);
+    border-radius: 2px;
+}
+
+.register form, .contact form {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.register form:hover, .contact form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Elements */
+.register .form-outline, .contact .form-outline {
+    margin-bottom: 1.75rem;
+    position: relative;
+}
+
+.register .form-label, .contact .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 10px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.register .form-control, .contact .form-control,
+.register select.form-control, .contact select.form-control,
+.register textarea.form-control, .contact textarea.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.register textarea.form-control, .contact textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.register .form-control:focus, .contact .form-control:focus,
+.register select.form-control:focus, .contact select.form-control:focus,
+.register textarea.form-control:focus, .contact textarea.form-control:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+    background-color: #fff;
+    outline: none;
+}
+
+/* File Input Specific */
+.register input[type="file"].form-control {
+    padding: 12px;
+    border: 2px dashed #ced4da;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.register input[type="file"].form-control:hover {
+    border-color: #27ae60;
+    background-color: rgba(39, 174, 96, 0.05);
+}
+
+/* Buttons */
+.register .btn-primary, .contact .btn-primary {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    border: none;
+    padding: 14px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.register .btn-primary:hover, .contact .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+}
+
+.register .btn-primary:active, .contact .btn-primary:active {
+    transform: translateY(0);
+}
+
+.register .btn-primary::after, .contact .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.register .btn-primary:hover::after, .contact .btn-primary:hover::after {
+    left: 100%;
+}
+
+/* Links */
+.register a, .contact a {
+    color: #27ae60;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+.register a:hover, .contact a:hover {
+    color: #219653;
+    transform: translateX(3px);
+}
+
+.register a::after, .contact a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #27ae60;
+    transition: width 0.3s ease;
+}
+
+.register a:hover::after, .contact a:hover::after {
+    width: 100%;
+}
+
+/* Text */
+.register p, .contact p {
+    margin-top: 20px;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Image Preview (Register Specific) */
+.image-preview-container {
+    text-align: center;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.image-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e9ecef;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.image-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.register .form-outline, .contact .form-outline {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Staggered Animations for Form Fields */
+.register .form-outline:nth-child(1) { animation-delay: 0.1s; }
+.register .form-outline:nth-child(2) { animation-delay: 0.2s; }
+.register .form-outline:nth-child(3) { animation-delay: 0.3s; }
+.register .form-outline:nth-child(4) { animation-delay: 0.4s; }
+.register .form-outline:nth-child(5) { animation-delay: 0.5s; }
+.register .form-outline:nth-child(6) { animation-delay: 0.6s; }
+.register .form-outline:nth-child(7) { animation-delay: 0.7s; }
+
+.contact .form-outline:nth-child(1) { animation-delay: 0.1s; }
+.contact .form-outline:nth-child(2) { animation-delay: 0.2s; }
+.contact .form-outline:nth-child(3) { animation-delay: 0.3s; }
+.contact .form-outline:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register, .contact {
+        padding: 40px 15px;
+    }
+    
+    .register form, .contact form {
+        padding: 30px;
+        backdrop-filter: none;
+    }
+    
+    .register h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+    
+    .register::before, .contact::before {
+        display: none;
+    }
+}
+
