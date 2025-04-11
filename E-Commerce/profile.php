@@ -20,23 +20,23 @@ if(!isset($_SESSION['username'])){
 <body>
     <!-- upper-nav -->
     <div class="upper-nav primary-bg p-2 px-3 text-center text-break">
-        <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a>Shop Now</a></span>
+        <span>Welcome to AFFAR.tn</a></span>
     </div>
     <!-- upper-nav -->
     <!-- Start NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">A1</a>
+            <a class="navbar-brand fw-bold" href="#">AFFAR</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.php">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../products.php">Products</a>
+                        <a class="nav-link" href="products.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">About</a>
@@ -48,13 +48,13 @@ if(!isset($_SESSION['username'])){
                         <a class="nav-link active"  aria-current="page" href="profile.php">My Account</a>
                     </li>
                 </ul>
-                <form class="d-flex" action="../search_product.php">
+                <form class="d-flex" action="search_product.php">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../cart.php"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <a class="nav-link" href="cart.php"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 27C11.5523 27 12 26.5523 12 26C12 25.4477 11.5523 25 11 25C10.4477 25 10 25.4477 10 26C10 26.5523 10.4477 27 11 27Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M25 27C25.5523 27 26 26.5523 26 26C26 25.4477 25.5523 25 25 25C24.4477 25 24 25.4477 24 26C24 26.5523 24.4477 27 25 27Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M3 5H7L10 22H26" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -94,7 +94,7 @@ if(!isset($_SESSION['username'])){
                     <?php
                     if(!isset($_SESSION['username'])){
                         echo "<li class='nav-item'>
-                        <a class='nav-link' href='./users_area/user_login.php'>
+                        <a class='nav-link' href='user_login.php'>
                             Login
                         </a>
                     </li>";
@@ -176,13 +176,13 @@ if(!isset($_SESSION['username'])){
                             <?php
                                 get_user_order_details();
                                 if(isset($_GET['edit_account'])){
-                                    include('./edit_account.php');
+                                    include('edit_account.php');
                                 }
                                 if(isset($_GET['my_orders'])){
-                                    include('./user_orders.php');
+                                    include('user_orders.php');
                                 }
                                 if(isset($_GET['delete_account'])){
-                                    include('./delete_account.php');
+                                    include('delete_account.php');
                                 }
                             ?>
                         </div>
