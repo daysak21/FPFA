@@ -43,7 +43,7 @@ session_start();
                             <div class="form-outline">
                                 <input type="submit" value="Login" class="btn btn-primary mb-3" name="admin_login">
                                 <p class="small">
-                                    Don't have an account? <a href="./admin_resgistration.php" class="text-decoration-underline text-success fw-bold">Register</a>
+                                Want to register  as admin ? <a href="../contactus.php" class="text-decoration-underline text-success fw-bold"> Contact us !</a>
                                 </p>
                             </div>
                         </form>
