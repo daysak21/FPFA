@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-      <span>Welcome to AFFAR.TN <a>Shop Now</a></span>
-    </div>
+<div class="upper-nav primary-bg p-2 px-3 text-center text-break">
+        <span>Welcome to AFFAR.TN <a>Shop Now</a></span>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">AFFAR</a>
