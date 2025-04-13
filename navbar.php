@@ -97,7 +97,7 @@
                     </li>";
                     }
                     echo"<li class='nav-item'>
-                        <a class='nav-link' href='./admin'>
+                        <a class='nav-link' href='./admin/admin_login.php'>
                         <i class='fa-solid fa-lock' aria-hidden='true'>
                         </i>
                         Admin

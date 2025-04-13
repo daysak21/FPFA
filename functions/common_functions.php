@@ -1,6 +1,6 @@
 <?php
 // include connect file from DB
- include('./includes/connect.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/fpfa/includes/connect.php');
 // getting products
 function getProduct($numToDisplay = '')
 {

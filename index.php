@@ -62,6 +62,7 @@ session_start();
             </div>
             <div class="cards">
                 <div class="card">
+                    <a href="category.php?category=">
                     <span>
                         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_822_6314)">
@@ -79,6 +80,7 @@ session_start();
 
                     </span>
                     <span>Phones</span>
+                    </a>
                 </div>
                 <div class="card">
                     <span>

@@ -240,6 +240,7 @@ ul {
 .bg-light {
     background-color: #ffffff !important;
     border-bottom: 1px solid #7D8184;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .d-flex .form-control {
@@ -258,6 +259,19 @@ ul {
     color: #ffffff;
     border: none;
     transition: 0.3s ease-in-out;
+}
+
+.navbar li.nav-item a.nav-link {
+    color: #000000;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.navbar li.nav-item a.nav-link:hover {
+    color: #27ae60;
 }
 
 /* End NavBar */
@@ -743,7 +757,10 @@ td {
     transition: 0.3s ease-in-out;
 
 }
+
+
 .burger:hover{
+
     background-color:rgb(226, 236, 230);
 }
 
