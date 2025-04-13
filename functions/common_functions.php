@@ -1,11 +1,10 @@
 <?php
 // include connect file from DB
-// include('./includes/connect.php');
+ include('./includes/connect.php');
 // getting products
 function getProduct($numToDisplay = '')
 {
     global $con;
-    // condition to check isset or not 
     if (!isset($_GET['category'])) {
         if (!isset($_GET['brand'])) {
             empty($numToDisplay) ? $select_product_query = "SELECT * FROM `products` ORDER BY rand()" : $select_product_query = "SELECT * FROM `products` ORDER BY rand() LIMIT 0,$numToDisplay";

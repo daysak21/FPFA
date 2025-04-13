@@ -253,6 +253,13 @@ ul {
     border: none;
 }
 
+.navbar .d-flex .btn-outline-primary:hover {
+    background-color:rgb(88, 228, 147);
+    color: #ffffff;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
 /* End NavBar */
 /*  *******************
     **** Index.php ****
@@ -713,4 +720,30 @@ td {
       padding: 0.5rem 1rem;
     }
   }
+
+  
+
+#results{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
+}
+
+
+#results a:hover {
+    background-color:rgba(184, 245, 224, 0.89);
+    transition: 0.3s ease-in-out;
+
+}
+#results a:active {
+    background-color:rgba(182, 216, 206, 0.5);
+    transition: 0.3s ease-in-out;
+
+}
+.burger:hover{
+    background-color:rgb(226, 236, 230);
+}
 

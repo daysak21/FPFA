@@ -4,8 +4,8 @@
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">AFFAR</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="index.php">AFFAR</a>
+            <button class="navbar-toggler burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -39,8 +39,9 @@
                 </ul>
 
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div id="results" class='mt-5 gap-0 dropdown-menu'></div>
                 </form>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -110,3 +111,29 @@
             </div>
         </div>
     </nav>
+    <script>
+const searchInput = document.getElementById('search');
+const resultsDiv = document.getElementById('results');
+
+searchInput.addEventListener('keyup', function () {
+    const query = this.value.trim();
+
+    if (query.length > 0) {
+        fetch('./functions/live_search.php?q=' + encodeURIComponent(query))
+            .then(res => res.text())
+            .then(data => {
+                resultsDiv.innerHTML = data;
+                resultsDiv.classList.add('show');
+            });
+    } else {
+        resultsDiv.innerHTML = '';
+        resultsDiv.classList.remove('show');
+    }
+});
+
+document.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target) && !resultsDiv.contains(e.target)) {
+        resultsDiv.classList.remove('show');
+    }
+});
+</script>
