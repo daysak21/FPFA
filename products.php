@@ -9,9 +9,11 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Products</title>
+    <title>Our Products</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
@@ -23,11 +25,11 @@ session_start();
         <div class="container">
             <div class="sub-container pt-4 pb-4">
                 <div class="categ-header">
-                    <div class="sub-title">
-                        <span class="shape"></span>
-                        <span class="title">Categories & Brands</span>
+                    <div class="header-content">
+                        <i class="fas fa-store"></i>
+                        <h2>Our Products</h2>
                     </div>
-                    <h2>Browse By Category & Brand</h2>
+                    <div class="cart-progress"></div>
                 </div>
                 <div class="row mx-0">
                     <div class="col-md-2 side-nav p-0">
