@@ -17,7 +17,7 @@
     <div class="container page-container">
         <div class="page-header">
             <h2 class="page-title">All Products</h2>
-            <a href="index.php?insert_product" class="btn btn-insert">
+            <a href="insert_product.php" class="btn btn-insert">
                 <i class="fas fa-plus"></i>Add Product
             </a>
         </div>
