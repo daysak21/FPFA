@@ -14,10 +14,10 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="products.php">Products</a>
+                        <a class="nav-link " aria-current="page" href="products.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">About</a>
+                        <a class="nav-link active" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contactus.php">Contact</a>
@@ -112,28 +112,17 @@
         </div>
     </nav>
     <script>
-const searchInput = document.getElementById('search');
-const resultsDiv = document.getElementById('results');
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.split("/").pop(); // gets just 'about.php', 'index.php', etc.
+  const navLinks = document.querySelectorAll(".nav-link");
 
-searchInput.addEventListener('keyup', function () {
-    const query = this.value.trim();
-
-    if (query.length > 0) {
-        fetch('./functions/live_search.php?q=' + encodeURIComponent(query))
-            .then(res => res.text())
-            .then(data => {
-                resultsDiv.innerHTML = data;
-                resultsDiv.classList.add('show');
-            });
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute("href").split("/").pop();
+    if (linkPage === currentPage) {
+      link.classList.add("active");
     } else {
-        resultsDiv.innerHTML = '';
-        resultsDiv.classList.remove('show');
+      link.classList.remove("active");
     }
-});
-
-document.addEventListener('click', function (e) {
-    if (!searchInput.contains(e.target) && !resultsDiv.contains(e.target)) {
-        resultsDiv.classList.remove('show');
-    }
+  });
 });
 </script>
