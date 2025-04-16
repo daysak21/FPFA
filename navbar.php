@@ -17,7 +17,7 @@
                         <a class="nav-link " aria-current="page" href="products.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.php">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contactus.php">Contact</a>
@@ -112,6 +112,30 @@
         </div>
     </nav>
     <script>
+const searchInput = document.getElementById('search');
+const resultsDiv = document.getElementById('results');
+
+searchInput.addEventListener('keyup', function () {
+    const query = this.value.trim();
+
+    if (query.length > 0) {
+        fetch('./functions/live_search.php?q=' + encodeURIComponent(query))
+            .then(res => res.text())
+            .then(data => {
+                resultsDiv.innerHTML = data;
+                resultsDiv.classList.add('show');
+            });
+    } else {
+        resultsDiv.innerHTML = '';
+        resultsDiv.classList.remove('show');
+    }
+});
+
+document.addEventListener('click', function (e) {
+    if (!searchInput.contains(e.target) && !resultsDiv.contains(e.target)) {
+        resultsDiv.classList.remove('show');
+    }
+});
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop(); // gets just 'about.php', 'index.php', etc.
   const navLinks = document.querySelectorAll(".nav-link");
@@ -125,4 +149,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-</script>
+    </script>
