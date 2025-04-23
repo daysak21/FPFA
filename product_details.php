@@ -1,6 +1,7 @@
 <?php
 include("includes/connect.php");
 include("functions/common_functions.php");
+include("functions/recommendation_functions.php"); // Inclusion des fonctions de recommandation
 session_start();
 ?>
 <!DOCTYPE html>
@@ -33,19 +34,28 @@ session_start();
     </div>
     <!-- End Product details  -->
 
-    <!-- Start Products  -->
+    <!-- Start Recommended Products  -->
     <div class="products">
         <div class="container">
             <div class="categ-header">
                 <div class="sub-title">
                     <span class="shape"></span>
-                    <span class="title">Related Products</span>
+                    <span class="title">Produits Recommandés</span>
                 </div>
-                <h2>Discover More Products</h2>
+                <h2>Vous pourriez aussi aimer</h2>
             </div>
             <div class="row mb-3">
                 <?php
-                getProduct(3);
+                if(isset($_GET['product_id'])) {
+                    $product_id = $_GET['product_id'];
+                    
+                    // Utiliser notre fonction de recommandation
+                    $found_recommendations = getRecommendedProducts($product_id, 4);
+                    
+                    // Si aucune recommandation n'est trouvée, utiliser la méthode existante
+                    
+                } 
+                
                 cart();
                 ?>
             </div>
@@ -54,8 +64,10 @@ session_start();
             </div>
         </div>
     </div>
-    <script src="assets//js/bootstrap.bundle.js"></script>
-    <script src="assets//js/script.js"></script>
+    <!-- End Recommended Products  -->
+    
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
     <?php require "footer.php" ;?>
 </body>
 
