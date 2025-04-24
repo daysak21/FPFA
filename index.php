@@ -55,7 +55,7 @@ session_start();
             </div>
             <div class="cards">
                 <div class="card">
-                    <a href="category.php?category=">
+                    <a href="products.php?category=1">
                     <span>
                         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_822_6314)">
@@ -75,6 +75,7 @@ session_start();
                     </a>
                 </div>
                 <div class="card">
+                    <a href="products.php?category=2">
                     <span>
                         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_822_6345)">
@@ -92,8 +93,10 @@ session_start();
                         </svg>
                     </span>
                     <span>Laptops</span>
+                    </a>
                 </div>
                 <div class="card">
+                    <a href="products.php?category=3">
                     <span>
                         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_822_6335)">
@@ -112,9 +115,11 @@ session_start();
                         </svg>
                     </span>
                     <span>SmartWatch</span>
+                    </a>
                 </div>
 
                 <div class="card">
+                    <a href="products.php?category=4">
                     <span>
                         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_822_1222)">
@@ -129,9 +134,11 @@ session_start();
                         </svg>
                     </span>
                     <span>Camera</span>
+                    </a>
                 </div>
 
                 <div class="card">
+                    <a href="products.php?category=5">
                     <span>
                         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_822_1758)">
@@ -147,6 +154,7 @@ session_start();
                         </svg>
                     </span>
                     <span>HeadPhones</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -158,7 +166,7 @@ session_start();
                 <span class="title">Categories</span>
                 <span class="desc">Enhance Your<br />Music Experience</span>
 
-                <button onclick="location.href='#'">
+                <button onclick="location.href='./products.php?category=5'">
                     Buy Now!
                 </button>
             </div>

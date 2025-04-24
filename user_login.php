@@ -25,7 +25,7 @@ session_start();
                 <p>Welcome back! Please login to your account</p>
             </div>
 
-            <form action="user_login_Controller.php" method="post" class="auth-form">
+            <form action="./user_login_Controller.php" method="post" class="auth-form">
                 <div class="form-group">
                     <label class="form-label">Username</label>
                     <input type="text" name="user_username" class="form-control" required placeholder="Enter your username">

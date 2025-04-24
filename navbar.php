@@ -3,13 +3,15 @@
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <div class="upper-nav primary-bg p-2 px-3 text-center text-break">
         <span>Welcome to AFFAR.TN <a>Shop Now</a></span>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.php">AFFAR</a>
-            <button class="navbar-toggler burger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,7 +45,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <!-- Updated Search Form with Advanced Search -->
                 <form class="d-flex position-relative" onsubmit="return false;">
                     <input class="form-control me-2" type="search" id="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="button">
+                    <button id="search-button" class="btn btn-outline-primary" type="button">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <div id="results" class="mt-5 gap-0 dropdown-menu position-absolute" style="width: 350px; max-height: 400px; overflow-y: auto; top: 100%; right: 0; z-index: 1000;"></div>
@@ -120,6 +122,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <!-- Add the search.js script at the end of your file, before the closing body tag -->
 <script src="js/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <!-- Add some CSS for the search results dropdown -->
 <style>

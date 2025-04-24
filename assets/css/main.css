@@ -22,7 +22,7 @@
     transition: var(--transition) !important;
 }
 
-.navbar-brand {
+.navbar-brand {              
     font-weight: 700 !important;
     font-size: 1.5rem !important;
     color: var(--primary-color) !important;
