@@ -153,7 +153,19 @@ def search():
         
         # For test data, just return the products directly
         if products == test_products:
-            return jsonify(products)
+    # Apply filtering on test data too
+            results = []
+            for product in test_products:
+                combined_text = f"{product['product_title']} {product.get('product_description', '')} {product.get('product_keywords', '')}"
+                processed_text = preprocess_text(combined_text)
+                score = cosine_similarity(vectorizer.transform([processed_query]), vectorizer.transform([processed_text]))[0][0]
+                if score > 0.01:
+                    product_copy = dict(product)
+                    product_copy['score'] = float(score)
+                    results.append(product_copy)
+            return jsonify(sorted(results, key=lambda x: x['score'], reverse=True))
+
+
         
         # Get full product details for top results
         results = []

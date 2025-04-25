@@ -11,7 +11,6 @@ function getRecommendedProducts($product_id, $limit = 4) {
         $row = mysqli_fetch_assoc($result_recommendations);
         $recommended_ids = json_decode($row['recommended_products'], true);
         
-        // Limiter le nombre de recommandations
         $recommended_ids = array_slice($recommended_ids, 0, $limit);
         
         if (!empty($recommended_ids)) {
