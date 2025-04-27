@@ -2,13 +2,12 @@
 include('includes/connect.php');
 include('functions/common_functions.php');
 session_start();
-<<<<<<< HEAD
-=======
+
 if(isset($_SESSION['username'])) {
     header("Location: profile.php");
     exit();
 }
->>>>>>> e2f84b817e27e8e4c4d3e53fff2419194a82ba4e
+
 ?>
 
 <!DOCTYPE html>
