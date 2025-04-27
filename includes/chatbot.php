@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="product-info">
                 <h4>${product.title}</h4>
                 <p>${product.price} DT</p>
-                <button onclick="window.location.href='products.php?id=${product.id}'">View Product</button>
+                <button onclick="window.location.href='product_details.php?product_id=${product.id}'">View Product</button>
             </div>
     `;
     
