@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         results.forEach(product => {
 
             html += `
-                <a href="product_details.php?id=${product.product_id}" class="dropdown-item p-2 text-decoration-none">
+                <a href="product_details.php?product_id=${product.product_id}" class="dropdown-item p-2 text-decoration-none">
                     <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0" style="width: 50px; height: 50px;">
+                        <div class="flex-shrink-0" style="width: 70px; height: 50px;">
                             <img src="./admin/product_images/${product.product_image_one}" alt="${product.product_title}" 
-                                 class="img-fluid" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                 class="img-fluid" style="max-width: 80%; max-height: 80%; object-fit: contain;">
                         </div>
                         <div class="flex-grow-1 ms-3">
                             <div class="fw-bold">${product.product_title}</div>
