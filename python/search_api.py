@@ -43,7 +43,7 @@ test_products = [
         "product_description": "A great smartphone with amazing features",
         "product_keywords": "phone, smartphone, mobile, electronics",
         "product_price": 499.99,
-        "product_image1": "smartphone.jpg"
+        "product_image_one": "smartphone.jpg"
     },
     {
         "product_id": "2",
@@ -51,7 +51,7 @@ test_products = [
         "product_description": "Powerful laptop for work and gaming",
         "product_keywords": "laptop, computer, notebook, electronics",
         "product_price": 899.99,
-        "product_image1": "laptop.jpg"
+        "product_image_one": "laptop.jpg"
     },
     {
         "product_id": "3",
@@ -59,7 +59,7 @@ test_products = [
         "product_description": "Premium noise-cancelling headphones",
         "product_keywords": "headphones, audio, music, electronics",
         "product_price": 199.99,
-        "product_image1": "headphones.jpg"
+        "product_image_one": "headphones.jpg"
     }
 ]
 
@@ -90,7 +90,7 @@ def get_all_products():
             
         cursor = conn.cursor(dictionary=True)
         
-        cursor.execute("SELECT product_id, product_title, product_description, product_keywords, product_price, product_image1 FROM products")
+        cursor.execute("SELECT product_id, product_title, product_description, product_keywords, product_price, product_image_one FROM products")
         products = cursor.fetchall()
         
         cursor.close()
@@ -240,7 +240,7 @@ test_products = [
         "product_description": "A great smartphone with amazing features",
         "product_keywords": "phone, smartphone, mobile, electronics",
         "product_price": 499.99,
-        "product_image1": "smartphone.jpg"
+        "product_image_one": "smartphone.jpg"
     },
     {
         "product_id": "2",
@@ -248,7 +248,7 @@ test_products = [
         "product_description": "Powerful laptop for work and gaming",
         "product_keywords": "laptop, computer, notebook, electronics",
         "product_price": 899.99,
-        "product_image1": "laptop.jpg"
+        "product_image_one": "laptop.jpg"
     },
     {
         "product_id": "3",
@@ -256,7 +256,7 @@ test_products = [
         "product_description": "Premium noise-cancelling headphones",
         "product_keywords": "headphones, audio, music, electronics",
         "product_price": 199.99,
-        "product_image1": "headphones.jpg"
+        "product_image_one": "headphones.jpg"
     }
 ]
 
@@ -287,7 +287,7 @@ def get_all_products():
             
         cursor = conn.cursor(dictionary=True)
         
-        cursor.execute("SELECT product_id, product_title, product_description, product_keywords, product_price, product_image1 FROM products")
+        cursor.execute("SELECT product_id, product_title, product_description, product_keywords, product_price, product_image_one FROM products")
         products = cursor.fetchall()
         
         cursor.close()

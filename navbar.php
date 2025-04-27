@@ -122,6 +122,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <!-- Add the search.js script at the end of your file, before the closing body tag -->
 <script src="js/search.js"></script>
+<script src="search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
